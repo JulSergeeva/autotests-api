@@ -4,8 +4,16 @@ from typing import TypedDict
 
 from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
 
+class File(TypedDict):
+    id: str
+    filename: str
+    directory: str
+    url: str
 
-class FileRequestDict(TypedDict):
+class CreateFileResponseDict(TypedDict):
+    file: File
+
+class CreateFileRequestDict(TypedDict):
     filename: str
     directory: str
     upload_file: str
@@ -14,7 +22,7 @@ class FilesClient(APIClient):
     def get_file_api(self, file_id: str) -> Response:
         return self.get(f"/api/v1/files/{file_id}")
 
-    def create_file_api(self, request: FileRequestDict) -> Response:
+    def create_file_api(self, request: CreateFileRequestDict) -> Response:
         return self.post(
             "/api/v1/files",
             data=request,
@@ -23,6 +31,10 @@ class FilesClient(APIClient):
 
     def delete_file_api(self, file_id: str) -> Response:
         return self.delete(f"/api/v1/files/{file_id}")
+
+    def create_file(self, request: CreateFileRequestDict) -> CreateFileResponseDict:
+        response = self.create_file_api(request)
+        return response.json()
 
 def get_files_client(user: AuthenticationUserDict) -> FilesClient:
     """
