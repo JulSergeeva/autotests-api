@@ -18,12 +18,12 @@ class LoginRequestSchema(BaseModel):
 
 class RefreshRequestSchema(BaseModel):
     """
-    Описание структуры ответа аутентификации.
+    Описание структуры запроса для обновления токена.
     """
     refresh_token: str = Field(alias="refreshToken")
 
 class LoginResponseSchema(BaseModel):
     """
-    Описание структуры запроса для обновления токена.
+    Описание структуры ответа аутентификации.
     """
     token: TokenSchema
