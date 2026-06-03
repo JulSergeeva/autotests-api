@@ -12,7 +12,7 @@ def validate_json_schema(instance: Any, schema: dict) -> None:
     :raises jsonschema.exceptions.ValidationError: Если instance не соответствует schema.
     """
     validate(
-        instance= instance,
+        instance=instance,
         schema=schema,
         format_checker=Draft202012Validator.FORMAT_CHECKER
     )
