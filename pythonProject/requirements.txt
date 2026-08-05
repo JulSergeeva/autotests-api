@@ -1,0 +1,11 @@
+allure-pytest==2.16.0
+email-validator==2.3.0
+Faker==40.18.0
+httpx==0.28.1
+jsonschema==4.26.0
+pydantic==2.13.4
+pydantic-settings==2.14.2
+pytest==9.0.3
+pytest-rerunfailures==16.3
+pytest-soft-assertions==0.1.2
+

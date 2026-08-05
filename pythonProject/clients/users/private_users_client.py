@@ -49,6 +49,8 @@ class PrivateUsersClient(APIClient):
         response = self.get_users_api(user_id)
         return GetUserResponseSchema.model_validate_json(response.text)
 
+
+
 def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
