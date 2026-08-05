@@ -55,7 +55,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Generate Allure  report with history
+      - name: Generate Allure report with history
         uses: simple-elf/allure-report-action@v1.15
         if: always()
         with:
