@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","267","Get user me","tests.users","2026-08-06","passed","2026-08-06","TestUsers","test_users","",""
+"","0","test_regression_case","tests.pytest","2026-08-06","passed","2026-08-06","","test_pytest_markers","",""
+"","552","Create user","tests.users","2026-08-06","passed","2026-08-06","TestUsers","test_users","",""
+"","285","Login success","tests.authentication","2026-08-06","passed","2026-08-06","TestAuthentication","test_authentication","",""
+"","257","Create file","tests.files","2026-08-06","failed","2026-08-06","TestFiles","test_files","",""
